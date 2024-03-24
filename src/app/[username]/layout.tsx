@@ -220,4 +220,4 @@ import Link from "next/link";
     )
   }
 
-  export default dynamic(()=> Promise.resolve(UserLayout));
+  export default dynamic(()=> Promise.resolve(UserLayout),  { ssr: true });
