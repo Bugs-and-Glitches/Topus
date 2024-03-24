@@ -18,5 +18,5 @@ const Help = ()=>{
 
 }
 
-export default dynamic(()=> Promise.resolve(Help))
+export default dynamic(()=> Promise.resolve(Help), { ssr: true })
 
