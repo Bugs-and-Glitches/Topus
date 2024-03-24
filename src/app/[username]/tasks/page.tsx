@@ -18,5 +18,5 @@ const Tasks = ()=>{
 
 }
 
-export default dynamic(()=> Promise.resolve(Tasks), , { ssr: true })
+export default dynamic(()=> Promise.resolve(Tasks), { ssr: true })
 
