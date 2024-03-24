@@ -18,4 +18,4 @@ import dynamic from 'next/dynamic'
     )
   }
 
-  export default dynamic(()=> Promise.resolve(TasksLayout));
+  export default dynamic(()=> Promise.resolve(TasksLayout), { ssr: true });
