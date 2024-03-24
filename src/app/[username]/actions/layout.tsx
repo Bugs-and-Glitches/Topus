@@ -18,4 +18,4 @@ import dynamic from 'next/dynamic'
     )
   }
 
-  export default dynamic(()=> Promise.resolve(ActionsLayout));
+  export default dynamic(()=> Promise.resolve(ActionsLayout) , { ssr: true });
