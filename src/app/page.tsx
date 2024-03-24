@@ -114,4 +114,4 @@ import Image from "next/image";
 }
 
 
-export default dynamic(()=> Promise.resolve(Home))
+export default dynamic(()=> Promise.resolve(Home), { ssr: true })
