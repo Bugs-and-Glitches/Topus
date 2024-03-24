@@ -18,4 +18,4 @@ import dynamic from 'next/dynamic'
     )
   }
 
-  export default dynamic(()=> Promise.resolve(RecordsLayout));
+  export default dynamic(()=> Promise.resolve(RecordsLayout), { ssr: true });
