@@ -202,5 +202,5 @@ const User = ()=>{
 
 }
 
-export default dynamic(()=> Promise.resolve(User), , { ssr: true })
+export default dynamic(()=> Promise.resolve(User), { ssr: true })
 
