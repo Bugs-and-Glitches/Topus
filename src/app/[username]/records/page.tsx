@@ -18,5 +18,5 @@ const Records = ()=>{
 
 }
 
-export default dynamic(()=> Promise.resolve(Records))
+export default dynamic(()=> Promise.resolve(Records), { ssr: true })
 
