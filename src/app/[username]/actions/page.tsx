@@ -18,5 +18,5 @@ const Actions = ()=>{
 
 }
 
-export default dynamic(()=> Promise.resolve(Actions), , { ssr: true })
+export default dynamic(()=> Promise.resolve(Actions),  { ssr: true })
 
