@@ -18,5 +18,5 @@ const Settings = ()=>{
 
 }
 
-export default dynamic(()=> Promise.resolve(Settings))
+export default dynamic(()=> Promise.resolve(Settings), { ssr: true })
 
