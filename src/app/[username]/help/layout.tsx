@@ -18,4 +18,4 @@ import dynamic from 'next/dynamic'
     )
   }
 
-  export default dynamic(()=> Promise.resolve(HelpLayout));
+  export default dynamic(()=> Promise.resolve(HelpLayout), { ssr: true });
