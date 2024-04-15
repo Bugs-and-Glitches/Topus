@@ -28,7 +28,7 @@ export default function Home() {
    <>
    <div className="flex h-screen justify-center items-center">
    <div className="flex flex-col h-screen justify-center items-start">
-   <div className="p-5">
+   <div className="md:p-5">
    <div className="mb-5 text-black font-black text-4xl">
    Sign In to 23bg
 
@@ -52,7 +52,7 @@ export default function Home() {
    
    </div>
    <div className="w-screen bg-zinc-100 fixed bottom-0 left-0 border-t-2 broder-rose-800">
-    <div className="flex justify-center items-center p-5">Don&apost have an account?<Link href="/signup/"><Button variant='link' className="p-1 font-semibold">Sign Up</Button></Link>
+    <div className="flex justify-center items-center p-5">Don&apos;t have an account?<Link href="/signup/"><Button variant='link' className="p-1 font-semibold">Sign Up</Button></Link>
     </div>
 
    </div>
