@@ -13,6 +13,7 @@ import { CommandDialog } from "cmdk"
 import { CommandDialogDemo } from "./components/search"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { ModeToggle } from "./components/theme"
 
 
 export default function Home() {
@@ -43,9 +44,9 @@ export default function Home() {
             </div>
 
             <div className="flex">
-              <Button variant='link' size='sm'>Contact</Button>
+            <Link href='/contact/'><Button variant='link' size='sm'>contact</Button></Link>
               <div className="m-1" />
-              <Button variant='outline' size='sm'>Sign In</Button>
+              <Link href='/signin/'><Button variant='outline' size='sm'>Sign In</Button></Link>
               <div className="m-1" />
               <Link href='/signup/'><Button variant='default' size='sm'>Sign Up</Button></Link>
             </div>
@@ -56,10 +57,26 @@ export default function Home() {
 
 
         <div className="p-5 lg:mx-32 md:mx-16">
+        <ModeToggle/>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptatem maxime distinctio ipsum ad laborum, et praesentium inventore iusto blanditiis ipsa iste laudantium excepturi debitis, numquam laboriosam voluptatibus ullam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt impedit officia enim sapiente ducimus autem sequi distinctio ullam facere cupiditate, molestiae sint eius dolorum. Tempora suscipit nesciunt id voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis omnis ullam voluptatum quo eligendi. Eius illo corrupti enim, placeat eum beatae deserunt magni unde, dolores exercitationem accusantium veniam quidem laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam dolorem minus repudiandae, a modi odit sapiente repellendus tempore ducimus laudantium, dignissimos porro, adipisci quia atque? Et sit ipsam consequatur consectetur.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptatem maxime distinctio ipsum ad laborum, et praesentium inventore iusto blanditiis ipsa iste laudantium excepturi debitis, numquam laboriosam voluptatibus ullam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt impedit officia enim sapiente ducimus autem sequi distinctio ullam facere cupiditate, molestiae sint eius dolorum. Tempora suscipit nesciunt id voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis omnis ullam voluptatum quo eligendi. Eius illo corrupti enim, placeat eum beatae deserunt magni unde, dolores exercitationem accusantium veniam quidem laudantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam dolorem minus repudiandae, a modi odit sapiente repellendus tempore ducimus laudantium, dignissimos porro, adipisci quia atque? Et sit ipsam consequatur consectetur.
         </div>
-        <div className="mb-20" />
+        
+        <div className="border-t-2"><div className="w-full p-5">
+          <div className='flex justify-between items-center mb-3'>
+           <div className="flex text-center  items-center text-sm "> <RocketIcon className='w-5 h-5'/><p className="text-zinc-500">&nbsp; ©&nbsp;2024 </p> </div>
+
+            <p className="text-blue-600 font-semibold mr-3 sm:mr-5">Just make it Easy &bull;</p>
+          </div>
+                  <div className="p-2">
+                  Built by shadcn. The source code is available on GitHub.
+
+
+
+                  </div>
+
+        </div></div>
+        <div className="mb-24" />
 
 
 
@@ -67,7 +84,7 @@ export default function Home() {
 
 
 
-        <div className="fixed bottom-0 left-0 border-t-2 w-full justify-between items-center flex p-5 visible md:invisible bg-zinc-100 z-10  ">
+        <div className="fixed bottom-0 left-0 border-t-2 w-full justify-between items-center flex p-5 visible md:invisible bg-zinc-100 dark:bg-zinc-950 z-10  ">
           <div className=" text-xl font-semibold flex">
             <Button variant='link'  className="font-semibold"><RocketIcon className="h-5 w-5 mr-2" />Topus</Button>
 
@@ -78,7 +95,7 @@ export default function Home() {
           <div className="pr-3 flex items-center">
             
           <Sheet >
-  <SheetTrigger><div className="rounded-full bg-white border-2 p-2"><MagnifyingGlassIcon className="w-5 h-5"/></div></SheetTrigger>
+  <SheetTrigger><div className="rounded-full bg-white dark:bg-black border-2 p-2"><MagnifyingGlassIcon className="w-5 h-5"/></div></SheetTrigger>
   <SheetContent className="w-full " side='top'>
     <SheetHeader>
     <p className="left-0 flex w-full font-semibold items-center"><MagnifyingGlassIcon className="w-5 h-5 mr-2"/>Serach</p>
@@ -101,31 +118,32 @@ export default function Home() {
 
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>Products</AccordionTrigger>
+                      <AccordionTrigger>Blog&apos;s</AccordionTrigger>
                       <AccordionContent className="left-0">
                         <div className="flex-col flex justify-center items-start">
 
                           <div className="ml-0 flex ">
-                            <Button variant='link' className="text-zinc-400">Automation</Button>
+                            <Link href='/blogs/23bg/'><Button variant='link' className="text-zinc-400">23bg</Button></Link>
                           </div>
                           <div className="ml-0 flex ">
-                            <Button variant='link' className="text-zinc-400">Fetures</Button>
+                            <Link href='/blogs/r&d/'><Button variant='link' className="text-zinc-400">Reserch and Devlopment</Button></Link>
                           </div>
+                          
 
 
                         </div>
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
-                      <AccordionTrigger>Solution</AccordionTrigger>
+                      <AccordionTrigger>Solution&apos;s</AccordionTrigger>
                       <AccordionContent>
                         <div className="flex-col flex justify-center items-start">
 
                           <div className="ml-0 flex ">
-                            <Button variant='link' className="text-zinc-400">Automation</Button>
+                          <Link href='/solutions/automation/'><Button variant='link' className="text-zinc-400">Automations</Button></Link>
                           </div>
                           <div className="ml-0 flex ">
-                            <Button variant='link' className="text-zinc-400">Fetures</Button>
+                          <Link href='/solutions/intregrations/'><Button variant='link' className="text-zinc-400">Intregrations</Button></Link>
                           </div>
 
 
@@ -133,26 +151,16 @@ export default function Home() {
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
-                      <AccordionTrigger>Resources</AccordionTrigger>
-                      <AccordionContent>
-                        <div className="flex-col flex justify-center items-start">
-
-                          <div className="ml-0 flex ">
-                            <Button variant='link' className="text-zinc-400">Automation</Button>
-                          </div>
-                          <div className="ml-0 flex ">
-                            <Button variant='link' className="text-zinc-400">Fetures</Button>
-                          </div>
-
-
+                    <div className="py-2 ml-1 flex justify-between"><Button variant='link' size='icon' className="text-sm">Theme</Button>
+                    <ModeToggle /></div>
+                    </AccordionItem>
+                    <AccordionItem value="item-3">
+                      <div className="py-2 ml-1 flex">
+                        <Link href='/pricing/'><Button variant='link' size='icon' className="text-sm">Pricing</Button></Link>
                         </div>
-                      </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
-                      <div className="py-2 ml-1 flex"><Button variant='link' size='icon' className="text-sm">Pricing</Button></div>
-                    </AccordionItem>
-                    <AccordionItem value="item-3">
-                      <div className="py-2 ml-2 flex"><Button variant='link' size='icon' className="text-sm">Contact</Button></div>
+                      <div className="py-2 ml-2 flex"><Link href='/contact/'><Button variant='link' size='icon' className="text-sm">Contact</Button></Link></div>
                     </AccordionItem>
                   </Accordion>
 

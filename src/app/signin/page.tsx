@@ -27,15 +27,15 @@ export default function Home() {
   return (
    <>
    <div className="flex h-screen justify-center items-center">
-   <div className="flex flex-col h-screen justify-center items-start">
+   <div className="flex flex-col  justify-center items-start">
    <div className="md:p-5">
-   <div className="mb-5 text-black font-black text-4xl">
+   <div className="mb-5 text-black dark:text-white font-black text-4xl">
    Sign In to 23bg
 
    </div>
    <div >
 
-    <Input type="email" placeholder="Email" size={20} className="bg-zinc-100"/>
+    <Input type="email" placeholder="Email" size={20} className="bg-zinc-100 dark:bg-zinc-800"/>
     
     <div className="mt-3 ">
     <Link href='/verify/'><Button className="w-full" type="submit"><EnvelopeClosedIcon className="mr-3"/>Continue with Email</Button></Link>
@@ -51,7 +51,7 @@ export default function Home() {
    </div>
    
    </div>
-   <div className="w-screen bg-zinc-100 fixed bottom-0 left-0 border-t-2 broder-rose-800">
+   <div className="w-screen bg-zinc-100  dark:bg-zinc-950 fixed bottom-0 left-0 border-t-2 broder-rose-800">
     <div className="flex justify-center items-center p-5">Don&apos;t have an account?<Link href="/signup/"><Button variant='link' className="p-1 font-semibold">Sign Up</Button></Link>
     </div>
 
